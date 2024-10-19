@@ -1,6 +1,6 @@
 class User {
 
-    private courseCount: number = 0
+    protected courseCount: number = 0
 
     readonly city: string = 'Jaipur'
     constructor(
@@ -21,6 +21,13 @@ class User {
 
     set setCoursecount(value: number){
         this.courseCount += value
+    }
+}
+
+class SubUser extends User {
+    isFamily: string = ''
+    changeCount(){
+        this.courseCount = 2
     }
 }
 
